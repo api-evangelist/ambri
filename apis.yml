@@ -1,23 +1,60 @@
 aid: ambri
+
 name: Ambri
-description: 'Ambri is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Ambri develops and commercializes liquid metal battery technology for grid‑scale renewable energy storage. Founded by MIT professors, the company delivers long‑duration energy storage solutions that enable higher renewable penetration and reduce reliance on fossil‑fuel power plants. Ambri’s batteries are deployed in data centers and utility projects, and the firm has secured funding from notable investors such as Bill Gates and Total.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ambri/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- Energy
+- Storage
+- Battery
+- Renewable
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/ambri-hosts.yml
+- type: Newsroom
+  url: https://ambri.com/news/
+- type: DomainSecurity
+  url: security/ambri-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/ambri
+  url: https://ambri.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The main site loads content via JavaScript and provides no machine‑readable API spec.
+  evidence:
+    - url: https://ambri.com
+      status: 200
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
